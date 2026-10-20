@@ -1,0 +1,11 @@
+# Same question as q3_sosa, but the alignment is applied at query time with property paths
+# (virtual alternative: nothing extra is materialised).
+PREFIX :     <http://example.org/edge#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+SELECT ?reading ?sensor ?value WHERE {
+  ?reading a :Alert ;
+           (:fromSensor|sosa:madeBySensor) ?sensor ;
+           (:hasValue|sosa:hasSimpleResult) ?value .
+  ?sensor :locatedIn ?room .
+  ?room :partOf :building_1 .
+}

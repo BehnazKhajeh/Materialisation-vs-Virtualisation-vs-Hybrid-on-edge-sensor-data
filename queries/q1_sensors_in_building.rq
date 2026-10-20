@@ -1,0 +1,7 @@
+# Needs: transitivity of partOf + class hierarchy
+PREFIX : <http://example.org/edge#>
+SELECT ?sensor WHERE {
+  ?sensor a :Sensor ;
+          :locatedIn ?room .
+  ?room :partOf :building_1 .
+}

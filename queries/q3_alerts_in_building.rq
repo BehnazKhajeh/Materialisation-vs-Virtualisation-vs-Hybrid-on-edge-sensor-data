@@ -1,0 +1,9 @@
+# Needs: alert rule + partOf transitivity
+PREFIX : <http://example.org/edge#>
+SELECT ?reading ?sensor ?value WHERE {
+  ?reading a :Alert ;
+           :fromSensor ?sensor ;
+           :hasValue ?value .
+  ?sensor :locatedIn ?room .
+  ?room :partOf :building_1 .
+}

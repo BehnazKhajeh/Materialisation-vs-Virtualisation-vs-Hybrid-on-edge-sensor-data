@@ -1,0 +1,3 @@
+# Needs: class hierarchy only
+PREFIX : <http://example.org/edge#>
+SELECT ?sensor WHERE { ?sensor a :TemperatureSensor . }

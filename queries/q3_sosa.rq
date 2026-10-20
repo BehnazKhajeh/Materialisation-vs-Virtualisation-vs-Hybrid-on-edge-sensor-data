@@ -1,0 +1,10 @@
+# Same question as q3, phrased with SOSA properties. Only answerable if the SOSA view is materialised.
+PREFIX :     <http://example.org/edge#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+SELECT ?reading ?sensor ?value WHERE {
+  ?reading a :Alert ;
+           sosa:madeBySensor ?sensor ;
+           sosa:hasSimpleResult ?value .
+  ?sensor :locatedIn ?room .
+  ?room :partOf :building_1 .
+}
