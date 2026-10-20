@@ -1,0 +1,4 @@
+rdflib>=7.0
+owlrl>=1.0.7
+matplotlib>=3.8
+pandas>=2.0

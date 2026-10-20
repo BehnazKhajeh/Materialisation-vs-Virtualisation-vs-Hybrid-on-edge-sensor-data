@@ -1,0 +1,26 @@
+@prefix :     <http://example.org/edge#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# Rule 1: class hierarchy
+:Sensor            a owl:Class .
+:TemperatureSensor a owl:Class ; rdfs:subClassOf :Sensor .
+:MotionSensor      a owl:Class ; rdfs:subClassOf :Sensor .
+:DoorSensor        a owl:Class ; rdfs:subClassOf :Sensor .
+
+:Place    a owl:Class .
+:Room     a owl:Class ; rdfs:subClassOf :Place .
+:Floor    a owl:Class ; rdfs:subClassOf :Place .
+:Building a owl:Class ; rdfs:subClassOf :Place .
+
+# Rule 2: transitive partOf (room -> floor -> building)
+:partOf a owl:ObjectProperty, owl:TransitiveProperty .
+:locatedIn a owl:ObjectProperty .
+
+# Rule 3 (not expressible in OWL-RL, implement by hand / SPARQL CONSTRUCT):
+# IF a TemperatureSensor has a reading with value > 28.0 THEN the reading is an :Alert
+:Reading a owl:Class .
+:Alert   a owl:Class ; rdfs:subClassOf :Reading .
+:hasValue a owl:DatatypeProperty .

@@ -1,0 +1,22 @@
+@prefix :     <http://example.org/edge#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Alignment of our vocabulary with SOSA (W3C Sensor, Observation, Sample, and Actuator ontology).
+# This file contains ONLY our alignment axioms plus minimal declarations of the SOSA terms we
+# point to. It is NOT the SOSA ontology itself. It is used only by src/kg_reasoner_comparison.py,
+# so the results of the other experiments are unaffected.
+
+# Minimal declarations of the SOSA terms
+sosa:Sensor          a owl:Class .
+sosa:Observation     a owl:Class .
+sosa:madeBySensor    a owl:ObjectProperty .
+sosa:hasSimpleResult a owl:DatatypeProperty .
+
+# Alignment axioms: our term -> SOSA term
+:Sensor     rdfs:subClassOf sosa:Sensor .
+:Reading    rdfs:subClassOf sosa:Observation .
+:fromSensor a owl:ObjectProperty ;
+            rdfs:subPropertyOf sosa:madeBySensor .
+:hasValue   rdfs:subPropertyOf sosa:hasSimpleResult .
