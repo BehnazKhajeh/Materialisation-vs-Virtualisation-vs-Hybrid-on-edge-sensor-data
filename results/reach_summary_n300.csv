@@ -1,0 +1,6 @@
+strategy,init_ms,update_ms,query_ms,stored_pairs,hot_hit_rate,peak_python_mb,correct_all
+virtual_bfs,0.2,0.007,0.0261,0,,0.1,True
+virtual_sql,10.2,0.072,0.1776,0,,0.0,True
+mat_recompute,15.7,8.002,0.0003,27235,,3.4,True
+mat_dred,13.5,185.061,0.0003,27235,,6.3,True
+hybrid_hot,0.5,2.134,0.0131,2038,0.57,0.3,True

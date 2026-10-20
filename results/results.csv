@@ -1,0 +1,10 @@
+size,approach,prep_s,peak_mb,base_triples,inferred_triples,q1_ms,q2_ms,q3_ms,correct
+10000,virtualisation,0.0,0.0,0,0,0.36,0.05,0.35,True
+10000,materialisation,0.462,34.6,30275,220,25.9,3.26,52.56,True
+10000,hybrid,0.009,0.46,275,158,26.92,3.27,28.71,True
+100000,virtualisation,0.0,0.0,0,0,0.2,0.05,0.96,True
+100000,materialisation,5.536,319.69,300275,793,27.75,4.11,500.05,True
+100000,hybrid,0.009,0.46,275,158,24.61,3.25,33.62,True
+500000,virtualisation,0.0,0.0,0,0,0.25,0.05,18.52,True
+500000,materialisation,28.899,1646.92,1500275,3429,25.19,3.76,2532.92,True
+500000,hybrid,0.009,0.46,275,158,24.43,3.28,166.26,True

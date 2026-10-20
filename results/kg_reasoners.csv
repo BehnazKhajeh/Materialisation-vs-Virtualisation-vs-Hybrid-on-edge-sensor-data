@@ -1,0 +1,13 @@
+readings,variant,base_triples,inferred,seconds,query_ms,correct
+1000,hand_selected,3275,160,0.0,,True
+1000,owlrl_general,3275,3083,1.09,,True
+1000,owlrl_sosa,3284,6195,1.6,5.3,True
+1000,virtual_sosa,3275,160,,6.2,True
+2000,hand_selected,6275,165,0.01,,True
+2000,owlrl_general,6275,5464,2.07,,True
+2000,owlrl_sosa,6284,11576,3.18,8.6,True
+2000,virtual_sosa,6275,165,,10.3,True
+5000,hand_selected,15275,187,0.01,,True
+5000,owlrl_general,15275,12048,5.16,,True
+5000,owlrl_sosa,15284,27160,7.82,21.1,True
+5000,virtual_sosa,15275,187,,26.5,True

@@ -1,0 +1,6 @@
+strategy,update_ms,query_ms,triples,rows,sqlite_mb,peak_python_mb,cost_Q1_ms,cost_Q10_ms,cost_Q100_ms,correct_all
+virtual,2.87,0.28,0,10000,0.5,0.0,3.2,5.7,30.9,True
+hybrid,2.73,27.45,433,10000,0.5,0.8,30.2,277.3,2748.0,True
+hybrid_cached,2.75,0.46,433,10000,0.5,0.6,3.2,7.4,49.1,True
+mat_incremental,71.54,43.79,30503,0,0,46.7,115.3,509.5,4451.0,True
+mat_recompute,514.43,43.51,30503,0,0,83.8,557.9,949.5,4865.1,True
